@@ -6,10 +6,10 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-
+#Paste Your Bard Cookkie Token.
 @app.route('/process_text', methods=['POST'])
 def process_text():
-    token = 'ZAhW0B7Errwz1EWVXdAjrm16NetKnraecg54Ob_pJUeegJI7T41KmwkArtNc6ta7rDzIMw.'
+    token = ''
     bard = Bard(token=token)
     data = request.get_json()
     input_text = data['text']
